@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>rory</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body{
+        position: relative;
+      }  
+      .calss{
+        position:fixed;
+        right: 0; 
+        top: 50px; 
+        height: 100%;
+        background-color: #F3F3F3;
+      }
+      .calst{
+        position:fixed;
+        top: 0;width: 100%; 
+        height: 50px; 
+        z-index: 99; 
+        background-color: #869342;
+      }
+      .ht{
+        background-color: red;
+        margin-top: 50px;
+        padding-bottom: 50px;
+      }
+      .calsb{
+        background:#F1F1F1;
+        height:50px;
+        text-align:center;
+        line-height:50px;
+        font-size:18px;
+        display:none;
+        position:fixed;
+        bottom:0px;
+        width: 100%;
+      }
+      .rig{
+        position:fixed;
+        right: 10px;
+        height: 25px;
+        width: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-12 calst">asdsad</div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 ht" >
+              <div>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+                  <p>我是内容</p>
+              </div>
+        </div>
+        <div class="col-md-3 calss">
+          <div class="row" style="height: 30%">
+            <div class="col-md-12" >
+              博主简介
+            </div>
+          </div>
+          <div class="row" style="height: 35%">
+            <div class="col-md-12" >
+              推荐文章
+              <span id="topt" style="display:none;">上去</span>
+            </div>
+          </div>
+          <div class="row" style="height: 10%">
+            <div class="col-md-12">
+              友情链接OR打赏
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 加载更多 -->
+    <div>
+      <div class='calsb col-md-12'><img src="img/loading.gif" title="加载中"> 数据加载中 <img id="closeLoad" class="rig" src="img/close.png" title="隐藏加载条"></div>
+    </div>
+    <!-- JS引用 -->
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- JS定义 -->
+      <script type="text/javascript">
+          //匿名函数调用(隐式闭包特性)
+          (function(){ 
+            var clicktag = 0;  
+            $(document).ready(function(){
+              $(window).scroll(function(){
+                if($(document).scrollTop()>=$(document).height()-$(window).height()){
+                if (clicktag == 0) { //防止同一时间加载多次
+                    clicktag = 1;
+                    load();
+                    setTimeout(function () { clicktag = 0 }, 5000); //还原判断参数
+                  }  
+                }
+              })
+            })
+            function load(){
+                $('.calsb').show(); //显示加载时候的提示
+                   // $.ajax({
+                  //     type:"GET",
+                  //     url:'',
+                  //     dataType:'json',
+                  //     beforeSend:function(){
+                  //     },
+                  //     success:function(ret){
+                  //      $(".after_div").before(ret) //将ajxa请求的数据追加到内容里面
+                  //      $('.calsb').hide() //请求成功,隐藏加载提示
+                  //     }
+                  // })
+            }
+
+            //给单个元素绑定
+           $("#closeLoad").on("click", function(){
+             $('.calsb').hide() //隐藏加载提示
+           });
+           //给多个元素绑定(选择由哪个元素触发)
+          // $("#closeLoad").on("click","img", function() {      //do something here  });
+
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失  
+            $(window).scroll(function(){  
+                if ($(window).scrollTop()>300){  
+                    $("#topt").fadeIn(100);  
+                }  
+                else  
+                {  
+                    $("#topt").fadeOut(100);  
+                }
+            });  
+            //当点击跳转链接后，回到页面顶部位置  
+            $("#topt").on("click", function(){
+              $('body,html').animate({scrollTop: 0},1000);  
+            // if ($('html').scrollTop()) {  
+            //     $('html').animate({ scrollTop: 0 }, 1000);  
+            //     return false;  
+            // }  
+            // $('body').animate({ scrollTop: 0 }, 1000);  
+            //      return false;              
+            // alert("yes");
+           });
+
+          })(); 
+        </script>
+   
+  </body>
+</html>
