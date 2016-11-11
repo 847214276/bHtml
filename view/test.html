@@ -9,9 +9,20 @@
 		<title>rory</title>
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
 		<style>
 			body {
 				position: relative;
+				font-family: 'Microsoft YaHei', Verdana, Arial, Helvetica, sans-serif;
+				overflow-x: hidden;
+				background-color: #f5f5f5;
+			}
+			.notC{
+				-moz-user-select:none;/*火狐*/
+				-webkit-user-select:none;/*webkit浏览器*/
+				-ms-user-select:none;/*IE10*/
+				-khtml-user-select:none;/*早期浏览器*/
+				user-select:none;
 			}
 			
 			.calss {
@@ -19,7 +30,7 @@
 				right: 0;
 				top: 50px;
 				height: 100%;
-				background-color: #F3F3F3;
+				background-color: #FFCCCC;
 				width: 22%;
 			}
 			
@@ -29,7 +40,7 @@
 				width: 100%;
 				height: 50px;
 				z-index: 99;
-				background-color: #869342;
+				background-color: #FFFFCC;
 			}
 			
 			.ht {
@@ -38,7 +49,7 @@
 			}
 			
 			.calsb {
-				background: #F1F1F1;
+				background: #FFFFCC;
 				height: 50px;
 				text-align: center;
 				line-height: 50px;
@@ -58,29 +69,26 @@
 			
 			.jumbotron {
 				margin-bottom: 10px;
+				width: 94%;
+				background-color: #CCFFFF;
 			}
 		</style>
 	</head>
 
 	<body>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row ">
 				<div class="col-md-12 calst">
 					<div>12
 					</div>
-
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-10 ht">
 					<div>
-						<div class="jumbotron">
-							<div class="container">
-								...
-							</div>
-						</div>
+				
 
-						<div class="jumbotron">
+						<div class="jumbotron notC">
 							<h1>Hello, world!
 							</h1>
 							<p>...<div class="input-group">
@@ -132,34 +140,7 @@
 								<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 							</p>
 						</div>
-						<div class="jumbotron">
-							<h1>Hello, world!</h1>
-							<p>...</p>
-							<p>
-								<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-							</p>
-						</div>
-						<div class="jumbotron">
-							<h1>Hello, world!</h1>
-							<p>...</p>
-							<p>
-								<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-							</p>
-						</div>
-						<div class="jumbotron">
-							<h1>Hello, world!</h1>
-							<p>...</p>
-							<p>
-								<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-							</p>
-						</div>
-						<div class="jumbotron">
-							<h1>Hello, world!</h1>
-							<p>...</p>
-							<p>
-								<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-							</p>
-						</div>
+					
 						<div class="jumbotron">
 							<h1>Hello, world!</h1>
 							<p>...</p>
@@ -356,40 +337,75 @@
 							<ul id="myTab" class="nav nav-tabs">
 								<li class="active">
 									<a href="#home" data-toggle="tab">
-										W3Cschool Home
+										1
 									</a>
 								</li>
 								<li>
-									<a href="#ios" data-toggle="tab">iOS</a>
+									<a href="#ios" data-toggle="tab">2</a>
 								</li>
-								<li class="dropdown">
-									<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Java
+								<!-- <li class="dropdown">
+									<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">3
 										<b class="caret"></b>
 									</a>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
 										<li>
-											<a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a>
+											<a href="#jmeter" tabindex="-1" data-toggle="tab">3.1</a>
 										</li>
 										<li>
-											<a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a>
+											<a href="#ejb" tabindex="-1" data-toggle="tab">3.2</a>
 										</li>
 									</ul>
-								</li>
+								</li> -->
 							</ul>
 							<div id="myTabContent" class="tab-content">
 								<div class="tab-pane fade in active" id="home">
-									<p>W3Cschoool菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
+									<table class="table table-condensed">
+										<tr>
+											<td>123Home</td>
+											<td>345</td>
+										</tr>
+										<tr>
+											<td>123</td>
+											<td>345</td>
+										</tr>
+									</table>
 								</div>
 								<div class="tab-pane fade" id="ios">
-									<p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+									<table class="table table-condensed">
+								<tr>
+									<td>123ios</td>
+									<td>345</td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>345</td>
+								</tr>
+							</table>
 								</div>
-								<div class="tab-pane fade" id="jmeter">
-									<p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+							<!-- 	<div class="tab-pane fade" id="jmeter">
+									<table class="table table-condensed">
+								<tr>
+									<td>123jme</td>
+									<td>345</td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>345</td>
+								</tr>
+							</table>
 								</div>
 								<div class="tab-pane fade" id="ejb">
-									<p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。
-									</p>
-								</div>
+									<table class="table table-condensed">
+								<tr>
+									<td>123ejb</td>
+									<td>345</td>
+								</tr>
+								<tr>
+									<td>123</td>
+									<td>345</td>
+								</tr>
+							</table>
+								</div> -->
 							</div>
 
 							<span id="topt" style="display:none;">上去</span>
@@ -412,6 +428,22 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<!-- 悬浮窗 -->
+		<div class="yb_conct">
+		  <div class="yb_bar">
+		    <ul>
+		      <li class="yb_top">返回顶部</li>
+		      <li class="yb_phone">4008-123-456</li>
+		      <li class="yb_QQ">
+		      	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=503362323&amp;site=qq&amp;menu=yes" title="即刻发送您的需求">在线咨询</a>
+		      </li>
+
+		      <li class="yb_ercode" style="height:53px;">QQ二维码 <br>
+		        <img class="hd_qr" src="img/weixin.jpg" width="125" alt="关注你附近"> </li>
+		    </ul>
+		  </div>
 		</div>
 
 		<!-- 加载更多 -->
@@ -489,6 +521,14 @@
 					// alert("yes");
 				});
 
+				// 悬浮窗口
+				$(".yb_conct").hover(function() {
+					$(".yb_conct").css("right", "5px");
+					$(".yb_bar .yb_ercode").css('height', '200px');
+				}, function() {
+					$(".yb_conct").css("right", "-127px");
+					$(".yb_bar .yb_ercode").css('height', '53px');
+				});
 			})();
 		</script>
 
